@@ -5,15 +5,14 @@ import java.util.List;
 
 public class Algorithm {
 
-    HashMap<String, String> hashMap = new HashMap<String, String>();
+    HashMap<String, String> hashMap = new HashMap<>();
     public void sorting(String string){
-            String temp = string;
-            char[] sortArray = temp.toLowerCase().toCharArray();
+            char[] sortArray = string.toLowerCase().toCharArray();
             Arrays.sort(sortArray);
             ArrayList<Character> tempArray = new ArrayList<>();
-        for (int i = 0; i < sortArray.length; i++) {
-            if (sortArray[i] != ' '){
-            tempArray.add(sortArray[i]);
+        for (char cha : sortArray) {
+            if (cha != ' ') {
+                tempArray.add(cha);
             }
         }
         char[] sortedArray = new char[tempArray.size()];
@@ -26,19 +25,13 @@ public class Algorithm {
     }
     public void getList(List<String> unsortedList){
 
-        for (int i = 0; i < unsortedList.size(); i++) {
-            sorting(unsortedList.get(i));
+        for (String s : unsortedList) {
+            sorting(s);
         }
         System.out.println(" ");
         for (String key : hashMap.keySet()) {
             System.out.print(hashMap.get(key) + " = ");
             System.out.println(key);
         }
-    }
-    public void sortHashmap(){
-
-    }
-    public boolean abc(){
-        return true;
     }
 }
