@@ -21,7 +21,7 @@ public class Algorithm {
         }
             String sortedString = new String(sortedArray);
         System.out.println(sortedString);
-            hashMap.put(sortedString, string);
+            hashMap.put(string, sortedString);
     }
     public void getList(List<String> unsortedList){
 
@@ -30,8 +30,7 @@ public class Algorithm {
         }
         System.out.println(" ");
         for (String key : hashMap.keySet()) {
-            System.out.print(hashMap.get(key) + " = ");
-            System.out.println(key);
+            System.out.println(key + " = " + hashMap.get(key));
         }
     }
 }
